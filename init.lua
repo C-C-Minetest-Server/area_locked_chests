@@ -70,3 +70,9 @@ local def = {
 default.set_inventory_action_loggers(def, "chest")
 
 minetest.register_node("area_locked_chests:area_locked_chests", def)
+
+minetest.register_craft({
+	type = "shapeless",
+	recipe = {"default:chest_locked","default:steel_ingot"},
+	output = "area_locked_chests:area_locked_chests",
+})
