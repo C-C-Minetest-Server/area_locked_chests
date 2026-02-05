@@ -76,6 +76,11 @@ default.set_inventory_action_loggers(def, "chest")
 
 core.register_node("area_locked_chests:area_locked_chests", def)
 
+if core.global_exists("pipeworks") then
+	pipeworks.override_chest("area_locked_chests:area_locked_chests", {},
+		{ left = 1, right = 1, back = 1, bottom = 1, top = 1 })
+end
+
 core.register_craft({
 	type = "shapeless",
 	recipe = { "default:chest_locked", "default:steel_ingot" },
